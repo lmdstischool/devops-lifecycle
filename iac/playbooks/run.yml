@@ -1,0 +1,10 @@
+---
+- hosts: userapi_server
+  become: true
+  roles:
+  - role: userapi/install
+    tags: install
+
+
+  - role: userapi/healthcheck
+    tags: check
